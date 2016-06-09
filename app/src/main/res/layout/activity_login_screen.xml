@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:text="Login"
         android:id="@+id/loginButton"
-        android:onClick="moveToPage"
+        android:onClick="moveToMainScreen"
         android:layout_below="@+id/passwordField"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="103dp" />

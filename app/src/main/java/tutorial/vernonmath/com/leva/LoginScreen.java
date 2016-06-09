@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 public class LoginScreen extends AppCompatActivity {
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,10 +20,12 @@ public class LoginScreen extends AppCompatActivity {
 
     }
 
-    public void moveToMainScreen(View view){
-        Intent goToMainPage = new Intent(this, MapScreen.class);
 
-        EditText usernameField = (EditText) findViewById(R.id.usernameField);
+
+    public void moveToMainScreen(View view){
+        Intent goToMapScreen = new Intent(this, MapScreen.class);
+        startActivity(goToMapScreen);
+       EditText usernameField = (EditText) findViewById(R.id.usernameField);
         EditText passwordField = (EditText) findViewById(R.id.passwordField);
         TextView errorText = (TextView) findViewById(R.id.errorText);
 
@@ -28,12 +33,13 @@ public class LoginScreen extends AppCompatActivity {
         login = usernameField.getText().toString();
         String password = passwordField.getText().toString();;
 
-       if(login == "user1" && password == "password"){
-           startActivity(goToMainPage);
+
+      if(login == "user1" && password == "password"){
+
        }
-        else{
-            errorText.setText("Incorrect Password Try again");
-       }
+      else{
+     // errorText.setText("Incorrect Password Try again");
+      }
 
 
 
