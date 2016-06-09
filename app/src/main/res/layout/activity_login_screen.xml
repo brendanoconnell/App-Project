@@ -58,4 +58,22 @@
         android:layout_alignLeft="@+id/loginButton"
         android:layout_alignStart="@+id/loginButton" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/loginDebug"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/errorText"
+        android:layout_toStartOf="@+id/errorText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/passwordDebug"
+        android:layout_below="@+id/loginDebug"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView" />
+
 </RelativeLayout>

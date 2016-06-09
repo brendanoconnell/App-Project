@@ -17,7 +17,7 @@
         </activity>
         <activity android:name=".MapScreen" />
         <activity android:name=".OrderScreen" />
-        <activity android:name=".RegistrationScreen"></activity>
+        <activity android:name=".RecieptScreen"></activity>
     </application>
 
 </manifest>

@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class LoginScreen extends AppCompatActivity {
 
-
+    String login;
 
 
     @Override
@@ -24,22 +24,30 @@ public class LoginScreen extends AppCompatActivity {
 
     public void moveToMainScreen(View view){
         Intent goToMapScreen = new Intent(this, MapScreen.class);
-        startActivity(goToMapScreen);
-       EditText usernameField = (EditText) findViewById(R.id.usernameField);
+
+        EditText usernameField = (EditText) findViewById(R.id.usernameField);
         EditText passwordField = (EditText) findViewById(R.id.passwordField);
         TextView errorText = (TextView) findViewById(R.id.errorText);
 
-        String login;
+        // Declare Debug Fields
+        TextView loginDebug = (TextView) findViewById(R.id.loginDebug);
+        TextView passwordDebug = (TextView) findViewById(R.id.passwordDebug);
+
+        // Get values from form
         login = usernameField.getText().toString();
-        String password = passwordField.getText().toString();;
+        String password = passwordField.getText().toString();
+
+        // Make sure they are what we expect.
+        loginDebug.setText(login);
+        passwordDebug.setText(password);
 
 
-      if(login == "user1" && password == "password"){
 
-       }
-      else{
-     // errorText.setText("Incorrect Password Try again");
-      }
+        if(login == "user1" && password == "password"){
+            startActivity(goToMapScreen);
+        }else {
+            errorText.setText("Incorrect Password Try again");
+        }
 
 
 
