@@ -32,42 +32,68 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_below="@+id/textView"
-        android:layout_toLeftOf="@+id/textView"
-        android:layout_toStartOf="@+id/textView"
-        android:layout_marginTop="31dp"
-        android:id="@+id/destination" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/numberOfPeople"
-        android:layout_below="@+id/destination"
-        android:layout_alignLeft="@+id/destination"
-        android:layout_alignStart="@+id/destination"
-        android:layout_marginTop="40dp"
-        android:layout_alignRight="@+id/destination"
-        android:layout_alignEnd="@+id/destination" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/time"
-        android:layout_below="@+id/numberOfPeople"
-        android:layout_alignLeft="@+id/numberOfPeople"
-        android:layout_alignStart="@+id/numberOfPeople"
-        android:layout_marginTop="34dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Thank you for using Leva"
         android:id="@+id/textView2"
         android:layout_above="@+id/backButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="66dp" />
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/locationText"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginTop="37dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/destinationText"
+        android:layout_below="@+id/locationText"
+        android:layout_alignLeft="@+id/locationText"
+        android:layout_alignStart="@+id/locationText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/totalText"
+        android:layout_below="@+id/destinationText"
+        android:layout_alignLeft="@+id/destinationText"
+        android:layout_alignStart="@+id/destinationText"
+        android:layout_marginTop="41dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/yChildrenText"
+        android:layout_below="@+id/totalText"
+        android:layout_alignLeft="@+id/totalText"
+        android:layout_alignStart="@+id/totalText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/timeText"
+        android:layout_above="@+id/textView4"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_marginBottom="65dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Total Price: $35 (tentative)"
+        android:id="@+id/textView4"
+        android:layout_above="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginBottom="31dp" />
 
 </RelativeLayout>

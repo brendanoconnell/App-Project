@@ -27,20 +27,45 @@
         android:layout_below="@+id/locationText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_marginTop="30dp"
+        android:layout_alignRight="@+id/locationText"
+        android:layout_alignEnd="@+id/locationText" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/completeButton"
+        android:text="Complete"
+        android:onClick="Complete"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/cancelButton"
+        android:layout_toEndOf="@+id/cancelButton"
+        android:layout_marginLeft="44dp"
+        android:layout_marginStart="44dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:onClick="back"
+        android:id="@+id/cancelButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="60dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/adultNumberText"
-        android:text="Number of Adults"
+        android:id="@+id/totalText"
+        android:layout_marginTop="27dp"
+        android:text="Total Number of Passengers"
         android:layout_below="@+id/destinationText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="30dp"
         android:layout_alignRight="@+id/destinationText"
         android:layout_alignEnd="@+id/destinationText" />
 
@@ -50,75 +75,38 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/yChildrenText"
-        android:text="Number of Young Children"
-        android:layout_below="@+id/adultNumberText"
+        android:layout_below="@+id/totalText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/adultNumberText"
-        android:layout_alignEnd="@+id/adultNumberText" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/oChildrenText"
-        android:text="Number of Older Children"
-        android:layout_below="@+id/yChildrenText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/yChildrenText"
-        android:layout_alignEnd="@+id/yChildrenText" />
+        android:layout_alignRight="@+id/totalText"
+        android:layout_alignEnd="@+id/totalText"
+        android:text="Number of Children with Booster Seats" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="time"
         android:ems="10"
-        android:id="@+id/pTimeText"
-        android:layout_marginTop="45dp"
-        android:text="Pickup Time"
-        android:layout_below="@+id/oChildrenText"
+        android:id="@+id/timeText"
+        android:text="Time of Pickup"
+        android:layout_below="@+id/yChildrenText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/adultNumberText"
-        android:layout_alignEnd="@+id/adultNumberText" />
+        android:layout_marginTop="26dp"
+        android:layout_alignRight="@+id/yChildrenText"
+        android:layout_alignEnd="@+id/yChildrenText" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="date"
         android:ems="10"
-        android:id="@+id/pDateText"
-        android:layout_below="@+id/pTimeText"
+        android:id="@+id/dateText"
+        android:text="Date of Pickup"
+        android:layout_below="@+id/timeText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/pTimeText"
-        android:layout_alignEnd="@+id/pTimeText"
-        android:text="Pickup Date" />
+        android:layout_alignRight="@+id/timeText"
+        android:layout_alignEnd="@+id/timeText" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/completeButton"
-        android:layout_marginRight="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginTop="29dp"
-        android:text="Complete"
-        android:onClick="Complete"
-        android:layout_below="@+id/pDateText"
-        android:layout_alignRight="@+id/pDateText"
-        android:layout_alignEnd="@+id/pDateText" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cancel"
-        android:onClick="back"
-        android:id="@+id/cancelButton"
-        android:layout_marginRight="47dp"
-        android:layout_marginEnd="47dp"
-        android:layout_alignTop="@+id/completeButton"
-        android:layout_toLeftOf="@+id/completeButton"
-        android:layout_toStartOf="@+id/completeButton" />
 </RelativeLayout>

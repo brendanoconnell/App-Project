@@ -7,50 +7,52 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class LoginScreen extends AppCompatActivity {
+public class LoginScreen extends AppCompatActivity implements View.OnClickListener {
 
     String login;
-
+    String password;
+    public EditText usernameField;
+    public EditText passwordField;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
+        usernameField = (EditText) findViewById(R.id.usernameField);
+        passwordField = (EditText) findViewById(R.id.passwordField);
 
-
+        usernameField.setOnClickListener(this);
+        passwordField.setOnClickListener(this);
     }
 
+    public void onClick(View v) {
+        if (usernameField.isPressed()) {
+            usernameField.setText("");
 
+        }
+        if (passwordField.isPressed()) {
+            passwordField.setText("");
+        }
+    }
 
-    public void moveToMainScreen(View view){
+    public void moveToMainScreen(View view) {
         Intent goToMapScreen = new Intent(this, MapScreen.class);
 
-        EditText usernameField = (EditText) findViewById(R.id.usernameField);
-        EditText passwordField = (EditText) findViewById(R.id.passwordField);
+
         TextView errorText = (TextView) findViewById(R.id.errorText);
 
-        // Declare Debug Fields
-        TextView loginDebug = (TextView) findViewById(R.id.loginDebug);
-        TextView passwordDebug = (TextView) findViewById(R.id.passwordDebug);
+
 
         // Get values from form
         login = usernameField.getText().toString();
-        String password = passwordField.getText().toString();
-
-        // Make sure they are what we expect.
-        loginDebug.setText(login);
-        passwordDebug.setText(password);
+        password = passwordField.getText().toString();
 
 
 
-        if(login == "user1" && password == "password"){
+        if (login.equals("user1") && password.equals("password")) {
             startActivity(goToMapScreen);
-        }else {
-            errorText.setText("Incorrect Password Try again");
+        } else {
+                errorText.setText("Incorrect Password Try again");
         }
-
-
-
     }
-
 }

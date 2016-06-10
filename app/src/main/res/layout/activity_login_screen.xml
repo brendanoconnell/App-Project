@@ -56,24 +56,19 @@
         android:id="@+id/errorText"
         android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/loginButton"
-        android:layout_alignStart="@+id/loginButton" />
+        android:layout_alignStart="@+id/loginButton"
+        android:textColor="#f91d1d" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/loginDebug"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/errorText"
-        android:layout_toStartOf="@+id/errorText" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/passwordDebug"
-        android:layout_below="@+id/loginDebug"
-        android:layout_alignRight="@+id/imageView"
-        android:layout_alignEnd="@+id/imageView" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Leva"
+        android:id="@+id/textView3"
+        android:textStyle="bold"
+        android:textSize="50dp"
+        android:layout_above="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:textColor="#111211" />
 
 </RelativeLayout>
